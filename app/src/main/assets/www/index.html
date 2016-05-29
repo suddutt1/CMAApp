@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en" ng-app="cmaManagementApp" >
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Cognitive Medical Assistant - Management App</title>
+
+   <script src="js/angular.min.js"></script>
+   <script src="js/angular-animate.min.js"></script>
+   <script src="js/angular-route.min.js"></script>
+   <script src="js/ui-bootstrap-tpls-1.3.3.min.js"></script>
+   <script src="appjs/main.js"></script>
+   <script src="appjs/nativeutil.js"></script>
+   <script src="appjs/monitorgrpmodule.js"></script>
+   <script src="appjs/ongroundvendormodule.js"></script>
+   <script src="appjs/servicemgmtmodule.js"></script>
+   <link href="css/bootstrap.min.css" rel="stylesheet">
+   <link href="css/app.css" rel="stylesheet">
+    
+ </head>
+<body>
+	
+  <div class="well well-header"><h4>Cognitive Medical Assistant</h4></div>
+  <div ng-view></div>
+  <!-- Addig the template files below -->
+  <!-- Since we are not not serving from  web server,, we need to include all the teamplates here -->
+	<script type="text/ng-template" id="views/appHome.html">
+	<div class="container">
+	      	<div class="row" style="text-align: center;">
+	        	<div class="col-lg-6 col-sm-6 col-xs-6 col-md-6">
+	          		<p>
+	            		<button class="btn btn-sq-lg btn-sq btn-primary">
+	                		<span class="glyphicon glyphicon glyphicon-user"></span><br/>
+	                			<h5>User</h5>
+	            		</button>
+	            	</p>
+	        	</div>
+	        	<div class="col-lg-6 col-sm-6 col-xs-6 col-md-6">
+	          		<p>
+	            		<button class="btn btn-sq-lg btn-sq btn-primary" ng-click="loadMonitoringGrp();">
+	                		<span class="glyphicon glyphicon glyphicon-sunglasses"></span><br/>
+	                			<h5>Monitoring <br/> Group</h5>
+	            		</button>
+	            	</p>
+	        	</div>
+	       	</div> <!-- End of Row 1 -->
+	      	<div class="row" style="text-align: center;">
+	        	<div class="col-lg-6 col-sm-6 col-xs-6 col-md-6" >
+	          		<p >
+	            		<button class="btn btn-sq-lg btn-sq btn-primary" ng-click="loadServiceManagement();">
+	                		<span class="glyphicon glyphicon glyphicon-signal"></span><br/>
+	                			<h5>Service <br/> Management <br/> Group</h5>
+	            		</button>
+	            	</p>
+	        	</div>
+	        	<div class="col-lg-6 col-sm-6 col-xs-6 col-md-6" >
+	          		<p>
+	            		<button class="btn btn-sq-lg btn-sq btn-primary" ng-click="loadOnGroundVendor();">
+	                		<span class="glyphicon glyphicon-tags"></span><br/>
+	                			<h5>On Ground <br/>Vendor</h5>
+	            		</button>
+	            	</p>
+	        	</div>
+	       	</div> <!-- End of Row 2 -->
+	</div><!-- Container -->
+	</script>
+  <script type="text/ng-template" id="views/serviceManagementLanding.html">
+  <div class="container">
+        	<div class="row" style="text-align: center;">
+          	<div class="col-lg-12 col-sm-12 col-xs-12 col-md-12">
+            		<p>
+              		<button class="btn btn-sq-lg btn-sq btn-primary">
+                  		<span class="glyphicon glyphicon-tasks"></span><br/>
+                  			<h5>Request<br/>Status <br/><span class="badge badge-danger">4</span></h5>
+  
+              		</button>
+              	</p>
+          	</div>
+         	</div> <!-- End of Row 1 -->
+        	<div class="row" style="text-align: center;">
+          	<div class="col-lg-12 col-sm-12 col-xs-12 col-md-12" >
+            		<p >
+              		<button class="btn btn-sq-lg btn-sq btn-primary" ng-click="loadHome();">
+                  		<span class="glyphicon glyphicon-home"></span><br/>
+                  			<h5>Home</h5>
+              		</button>
+              	</p>
+          	</div>
+         	</div> <!-- End of Row 2 -->
+  </div><!-- Container -->
+  
+  
+  </script>
+  <script type="text/ng-template" id="views/onGroundVendorLanding.html">
+  <div class="container">
+        	<div class="row" style="text-align: center;">
+          	<div class="col-lg-12 col-sm-12 col-xs-12 col-md-12">
+            		<p>
+              		<button class="btn btn-sq-lg btn-sq btn-primary">
+                  		<span class="glyphicon glyphicon glyphicon-tasks"></span><br/>
+                  			<h5>Request<br/>Status <br/><span class="badge badge-danger">4</span></h5>
+  
+              		</button>
+              	</p>
+          	</div>
+         	</div> <!-- End of Row 1 -->
+        	<div class="row" style="text-align: center;">
+          	<div class="col-lg-12 col-sm-12 col-xs-12 col-md-12" >
+            		<p >
+              		<button class="btn btn-sq-lg btn-sq btn-primary" ng-click="loadHome();">
+                  		<span class="glyphicon glyphicon glyphicon-home"></span><br/>
+                  			<h5>Home</h5>
+              		</button>
+              	</p>
+          	</div>
+         	</div> <!-- End of Row 2 -->
+  </div><!-- Container -->
+  
+  </script>
+  <script type="text/ng-template" id="views/monitoringGroupLanding.html">
+  <div class="container">
+        	<div class="row" style="text-align: center;">
+          	<div class="col-lg-6 col-sm-6 col-xs-6 col-md-6">
+            		<p>
+              		<button class="btn btn-sq-lg btn-sq btn-primary">
+                  		<span class="glyphicon glyphicon-eye-open"></span><br/>
+                  			<h5>Request <br/>Monitoring</h5>
+              		</button>
+              	</p>
+          	</div>
+          	<div class="col-lg-6 col-sm-6 col-xs-6 col-md-6">
+            		<p>
+              		<button class="btn btn-sq-lg btn-sq btn-primary" >
+                  		<span class="glyphicon glyphicon-edit"></span><br/>
+                  			<h5>Vendor <br/> Management</h5>
+              		</button>
+              	</p>
+          	</div>
+         	</div> <!-- End of Row 1 -->
+        	<div class="row" style="text-align: center;">
+          	<div class="col-lg-6 col-sm-6 col-xs-6 col-md-6" >
+            		<p >
+              		<button class="btn btn-sq-lg btn-sq btn-primary" >
+                  		<span class="glyphicon glyphicon-adjust"></span><br/>
+                  			<h5>Service <br/> Orchestration <br/> Management </h5>
+              		</button>
+              	</p>
+          	</div>
+          	<div class="col-lg-6 col-sm-6 col-xs-6 col-md-6" >
+            		<p>
+              		<button class="btn btn-sq-lg btn-sq btn-primary" ng-click="loadHome();">
+                  		<span class="glyphicon glyphicon-home"></span><br/>
+                  			<h5>Home</h5>
+              		</button>
+              	</p>
+          	</div>
+         	</div> <!-- End of Row 2 -->
+  </div><!-- Container -->
+  
+  </script>
+</body>
+ </html>

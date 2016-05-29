@@ -1,0 +1,42 @@
+.btn-sq-lg {
+  width: 150px !important;
+  height: 150px !important;
+  word-wrap: break-word; 
+}
+
+.btn-sq {
+  width: 125px !important;
+  height: 125px !important;
+  font-size: 10px;
+  word-wrap: break-word;
+}
+
+.btn-sq-sm {
+  width: 50px !important;
+  height: 50px !important;
+  font-size: 10px;
+  word-wrap: break-word;
+}
+
+.btn-sq-xs {
+  width: 25px !important;
+  height: 25px !important;
+  padding:2px;
+  word-wrap: break-word;
+}
+.glyphicon {
+    font-size: 30px   ;
+}
+.well-header{
+  text-align: center;
+  background-color: #C0C0C0 ;
+  color: white;
+}
+.badge-danger{
+  background-color: #FF0000  !important;
+  color: white !important;
+  font-weight: 2.0em !important; 
+}
+body{
+  background-color:  #b3d9ff;
+}
