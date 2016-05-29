@@ -6,8 +6,6 @@ navBarModule.controller('navBarController',['$scope','$location','$http','$nativ
 
 		$scope.exitApp = function(){
 			$scope.navCollapsed = true;
-			$nativeAPI.exitApp();			
+			$nativeAPI.exitApp();
 		};
-
-
 	}]);
