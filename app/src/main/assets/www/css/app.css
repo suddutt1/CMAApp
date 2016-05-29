@@ -28,8 +28,8 @@
     font-size: 30px   ;
 }
 .well-header{
-  text-align: center;
-  background-color: #C0C0C0 ;
+  text-align: center !important;
+  background-color: #00004d ;
   color: white;
 }
 .badge-danger{
@@ -38,5 +38,5 @@
   font-weight: 2.0em !important; 
 }
 body{
-  background-color:  #b3d9ff;
+  background-color:  #cce6ff;
 }

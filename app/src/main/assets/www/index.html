@@ -16,14 +16,35 @@
    <script src="appjs/monitorgrpmodule.js"></script>
    <script src="appjs/ongroundvendormodule.js"></script>
    <script src="appjs/servicemgmtmodule.js"></script>
+   <script src="appjs/navbarcontroller.js"></script>
    <link href="css/bootstrap.min.css" rel="stylesheet">
    <link href="css/app.css" rel="stylesheet">
     
  </head>
 <body>
 	
-  <div class="well well-header"><h4>Cognitive Medical Assistant</h4></div>
-  <div ng-view></div>
+  	
+  	  <div class="well well-header">
+  	  	<div class="row">
+  	  	<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
+  		<button class="btn btn-sq-sm btn-primary" >
+                 <span class="glyphicon glyphicon-list" style="font-size: 20px"></span>
+          </button>
+          </div>
+          <div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+  				<span>&nbsp;</span>
+  		</div>
+          <div class="col-lg-8 col-sm-8 col-xs-8 col-md-8 well-header">
+          	<h5>Cognitive Medical Assistant</h5>
+          </div>
+          </div>
+  	  </div>
+  
+  
+  
+  
+  <div style="padding-top:1px;" ng-view></div>
+  </div>
   <!-- Addig the template files below -->
   <!-- Since we are not not serving from  web server,, we need to include all the teamplates here -->
 	<script type="text/ng-template" id="views/appHome.html">

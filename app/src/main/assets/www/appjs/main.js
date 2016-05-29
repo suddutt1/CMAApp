@@ -1,6 +1,6 @@
 
 var app = angular.module('cmaManagementApp', ['ui.bootstrap','nativeUtil',
-	'ngRoute','serviceManagementModule','onGroundVendorModule','monitoringGrpModule']);
+	'ngRoute','serviceManagementModule','onGroundVendorModule','monitoringGrpModule','navBarModule']);
 
 app.config(['$routeProvider',function($routeProvider){
 		

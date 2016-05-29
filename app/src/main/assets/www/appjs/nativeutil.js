@@ -32,7 +32,7 @@ nativeUtil.service('$nativeAPI',function(){
 	this.exitApp  = function(){
 	    if(typeof Android === "undefined")
 	    {
-
+	    	alert("Exiting application");
 	    }
 	    else
 	    {
