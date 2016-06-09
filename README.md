@@ -1,5 +1,4 @@
-# CMAAppvery 
-Cognitive Medical Assistant Application.
+# Mobile Framework For Hybrid application development
 
 #Framework
 
